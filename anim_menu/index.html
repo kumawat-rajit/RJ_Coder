@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Anim Nav</title>
+	<style>
+		.wrapper{
+			width: 800px;
+			margin: 0 auto;
+		}
+nav {
+	background-color: #262626;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+nav h2{
+	margin:0;
+	padding-top:10px;
+	padding-left: 25px;
+	color: #fff;
+
+}
+nav a{
+	text-decoration: none;
+	font-size: 24px;
+}
+nav ul{
+list-style: none;
+margin: 0;
+padding-left: 0;
+margin-left: auto;
+}
+nav li
+{
+	color: #fff;
+	background-color: #262626;
+	display: block;
+	padding: 10px 25px;
+	position: relative;
+	text-decoration: none;
+	transition-duration: 500ms;
+}	
+nav li a {
+	color: inherit;
+}
+li:hover,
+li:focus{
+	background-color: #cc2a36;
+	color#fff;
+	cursor: pointer;
+}
+nav li ul li {
+
+	position: absolute;
+	display: none;
+	transition: background-color 0.5s ease-in;
+	margin-top: 10px;
+	left: 0;
+
+}
+nav ul li:focus > ul,
+nav ul li:hover > ul,
+nav ul li ul:focus,
+nav ul li ul:hover
+{
+	opacity: 1;
+	display: block;
+}
+nav ul li ul li
+{
+	clear: both;
+	width: 100%;
+	animation:animate 800ms forwards ease;
+}
+nav ul li ul li:nth-of-type(1){
+	transform-origin: top left;
+	transform:skewX(45deg) scaleY(0);
+}
+nav ul li ul li:nth-of-type(2){
+	transform-origin: top right;
+	transform:skewX(-45deg) scaleY(0);
+	animation-delay: 150ms;
+}
+nav ul li ul li:nth-of-type(3){
+	transform-origin: top right;
+	transform:skewX(-45deg) scaleY(0);
+	animation-delay: 300ms;
+}
+nav ul li ul li:nth-of-type(4){
+	transform-origin: top right;
+	transform:skewX(-45deg) scaleY(0);
+	animation-delay: 450ms;
+}
+nav ul li ul li:nth-of-type(5){
+	transform-origin: top left;
+	transform:skewX(45deg) scaleY(0);
+	animation-delay: 600ms;
+}
+@keyframes animate {
+	to{
+		transform:skewX(0deg) scaleY(1);
+	}
+}
+</style>
+
+
+</head>
+<body>
+<div class="wrapper">
+	<nav>
+		<h2>Saffron</h2>
+		<ul>
+			
+			<li>
+				<a href="#">&#9776</a>
+				<ul class="dropdown" aria-label="submenu">
+					<li>
+						<a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="#">Service</a></li>
+						<li><a href="#">Other</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+
+</div>
+</body>
+</html>
